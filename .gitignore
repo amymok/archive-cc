@@ -99,3 +99,13 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# OS Files
+.DS_Store
+
+# Local Database
+db.sqlite3
