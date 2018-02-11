@@ -1,6 +1,11 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the id_generator index.")
+@api_view(['GET'])
+def generate_miro_subject_id(request):
+    """
+    Generate a Miro Subject ID based on Study ID and Study Subject ID
+    """
+    return Response({"miro_subject_id": "1234AE3"})

@@ -1,7 +1,6 @@
-from django.urls import path
-
-from . import views
+from django.urls import re_path
+import id_generator.views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    re_path(r'^$', id_generator.views.generate_miro_subject_id),
 ]
