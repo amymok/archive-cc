@@ -1,0 +1,23 @@
+[run]
+source = 
+    id_generator
+
+omit = 
+    */wsgi.py
+    *admin*
+    *migrations/*
+    *templatetags/*
+    */site-packages*
+    *setup.py
+    *manage.py
+    *test*
+    *__init__.py
+    *apps.py
+    *settings.py
+    *urls.py
+
+[report]
+exclude_lines = 
+    pragma: no cover
+    if __name__ == .__main__.:
+    datetime.now()
