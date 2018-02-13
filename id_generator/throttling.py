@@ -2,9 +2,9 @@ from rest_framework.throttling import AnonRateThrottle
 
 class BurstRateThrottle(AnonRateThrottle):
     scope = 'burst'
-    rate = '60/min'
+    rate = '2/min'
 
   
 class SustainedRateThrottle(AnonRateThrottle):
     scope = 'sustained'
-    rate = '1000/day'
+    rate = '15/day'
