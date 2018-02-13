@@ -17,6 +17,7 @@ from django.urls import include, path
 from django.contrib import admin
 
 urlpatterns = [
-    path('generate_miro_subject_id/', include('id_generator.urls')),
+    path('generate_miro_subject_id/', 
+        include('id_generator.urls', namespace='id_generator')),
     path('admin/', admin.site.urls),
 ]
