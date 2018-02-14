@@ -20,17 +20,17 @@ This project uses Python 3.6.  Other requirements can be retrieved and built wit
 This instruction assumes that you are using Mac OS.  You can set up an virtual environment to isolate all your requirements for this project.  If you are not familiar with how to create an virtual environment, you can refer to [Python venv documentation](https://docs.python.org/3/library/venv.html) to learn how to do so.
 
 ### Clone
-You will need to first clone the your local machine:
+You will need to first clone the project to your local machine:
 ``` shell
 git clone https://github.com/amymok/miro.git
 ```
 
 ### Dependencies
-This project uses `requirements.txt` files for defining dependencies, so you can get up and running with `pip`:
+This project uses `requirements/base.txt` files for defining dependencies, so you can get up and running with `pip`:
 
 ```shell
 cd miro
-pip install -r requirements.txt
+pip install -r requirements/base.txt
 
 ```
 
