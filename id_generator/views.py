@@ -1,9 +1,11 @@
 from rest_framework import status
 from rest_framework.decorators import api_view, throttle_classes
 from rest_framework.response import Response
-from id_generator.serializers import MiroSubjectIdInput
+
 from id_generator.id_generator import generate_subject_id
+from id_generator.serializers import MiroSubjectIdInput
 from id_generator.throttling import BurstRateThrottle, SustainedRateThrottle
+
 
 @api_view(['GET'])
 @throttle_classes([BurstRateThrottle, SustainedRateThrottle,])

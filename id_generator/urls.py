@@ -1,4 +1,5 @@
 from django.urls import re_path
+
 import id_generator.views
 
 app_name = 'id_generator'
