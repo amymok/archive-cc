@@ -8,7 +8,7 @@ from id_generator.throttling import BurstRateThrottle, SustainedRateThrottle
 
 
 @api_view(['GET'])
-@throttle_classes([BurstRateThrottle, SustainedRateThrottle,])
+@throttle_classes([BurstRateThrottle, SustainedRateThrottle])
 def generate_miro_subject_id(request):
     """
     Generate a Miro Subject ID based on Study ID and Study Subject ID
