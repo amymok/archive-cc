@@ -1,5 +1,4 @@
 import string
-import unittest.mock as mock
 
 from django.core.cache import cache
 from django.urls import reverse
@@ -38,8 +37,10 @@ class IdGeneratorTests(APITestCase):
         self.assertEqual(type(response.data), dict)
         self.assertEqual(len(response.data.keys()), 1)
         self.assertIn("miro_subject_id", response.data)
-        self.assertTrue(all(c in string.hexdigits
-            for c in response.data["miro_subject_id"]))
+        self.assertTrue(all(
+            c in string.hexdigits
+            for c in response.data["miro_subject_id"]
+        ))
 
     def test_generate_miro_subject_id_repeat__valid(self):
         """
@@ -56,8 +57,10 @@ class IdGeneratorTests(APITestCase):
         self.assertEqual(type(response.data), dict)
         self.assertEqual(len(response.data.keys()), 1)
         self.assertIn("miro_subject_id", response.data)
-        self.assertTrue(all(c in string.hexdigits
-            for c in response.data["miro_subject_id"]))
+        self.assertTrue(all(
+            c in string.hexdigits
+            for c in response.data["miro_subject_id"]
+        ))
 
         exp_id = response.data["miro_subject_id"]
         for i in range(10):
@@ -78,8 +81,12 @@ class IdGeneratorTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(len(response.data.keys()), 2)
         self.assertIn("study_id", response.data)
-        self.assertEqual(["This field may not be blank."],
-            response.data["study_id"])
+        self.assertEqual(
+            ["This field may not be blank."],
+            response.data["study_id"]
+        )
         self.assertIn("study_subject_id", response.data)
-        self.assertEqual(["This field may not be blank."],
-            response.data["study_subject_id"])
+        self.assertEqual(
+            ["This field may not be blank."],
+            response.data["study_subject_id"]
+        )

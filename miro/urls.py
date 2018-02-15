@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-urlpatterns = [
-    path('generate_miro_subject_id/', 
-        include('id_generator.urls', namespace='id_generator')),
-    path('admin/', admin.site.urls),
-]
+urlpatterns = [path(
+    'generate_miro_subject_id/',
+    include('id_generator.urls', namespace='id_generator')
+), path(
+    'admin/', admin.site.urls
+)]
