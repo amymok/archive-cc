@@ -1,0 +1,46 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "Miro ID Generator API"
+  description: "The API for generating unique ID based on study and subject ID"
+host: "127.0.0.1:8000"
+basePath: "/"
+schemes:
+- http
+produces:
+- "application/json"
+paths:
+  /generate_miro_subject_id/:
+    get:
+      tags:
+        - IDGenerator
+      summary: "Get Miro unique subject ID"
+      description: "Generate a unique ID given the study ID and study subject ID"
+      parameters:
+        - name: study_id
+          in: query
+          description: "ID for the study session"
+          required: true
+          type: string
+        - name: study_subject_id
+          in: query
+          description: "ID for the study participant"
+          required: true
+          type: string
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/MiroSubjectId"
+        400:
+          description: "invalid parameters specified"
+definitions:
+  MiroSubjectId:
+    type: object
+    properties:
+      miro_subject_id:
+        type: string
+        description: "A unique ID in hexademical"
+tags:
+  - name: IDGenerator
+    description: Endpoint to generate ID
