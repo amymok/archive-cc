@@ -40,4 +40,17 @@ You can now run the local development server
 python manage.py runserver
 ```
 
-## 
+## Basic API Usage
+There's one endpoint in this project:
+`GET /generate_miro_subject-id`
+
+It takes two required query parameters:
+- `study_id` : Study session ID
+- `study_subject_id`: Partcipant ID based in the study session
+
+example:
+You can navigate to your browser or API client and type:
+http://127.0.0.1:8000/generate_miro_subject_id/?study_id=200&study_subject_id=20000
+
+This will give you a json object back with one item:
+- `miro_subject_id`: Unique ID given based on Study ID and Study Subject ID
