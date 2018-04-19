@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/amymok/miro.svg?branch=master)](https://travis-ci.org/amymok/miro) [![Coverage Status](https://coveralls.io/repos/github/amymok/miro/badge.svg?branch=master)](https://coveralls.io/github/amymok/miro?branch=master)
+[![Build Status](https://travis-ci.org/amymok/archive-cc.svg?branch=master)](https://travis-ci.org/amymok/archive-cc) [![Coverage Status](https://coveralls.io/repos/github/amymok/archive-cc/badge.svg?branch=master)](https://coveralls.io/github/amymok/archive-cc?branch=master)
 
 archive-cc
 ====
@@ -22,7 +22,7 @@ This instruction assumes that you are using Mac OS.  You can set up a virtual en
 ### Clone
 You will need to first clone the project to your local machine:
 ``` shell
-git clone https://github.com/amymok/miro.git
+git clone https://github.com/amymok/rename-cc.git
 ```
 
 ### Dependencies
